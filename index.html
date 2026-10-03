@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hội Khuyến Học Việt Nam - Xây Dựng Xã Hội Học Tập</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#10b981', // Emerald green representing growth & education
+                        secondary: '#0284c7', // Professional Blue
+                        accent: '#f59e0b', // Gold representing excellence
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(2, 132, 199, 0.95) 100%), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-phone-alt text-primary mr-1"></i> Hotline: 1900 1568</span>
+                <span><i class="fas fa-envelope text-primary mr-1"></i> contact@hoikhuyenhoc.vn</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="bg-primary/20 text-primary px-2.5 py-0.5 rounded-full font-medium">Phiên bản 5.0</span>
+                <a href="#donate" class="hover:text-primary transition"><i class="fas fa-heart text-red-500 mr-1"></i> Ủng hộ quỹ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight leading-tight">HỘI KHUYẾN HỌC</h1>
+                    <p class="text-xs text-slate-500 font-medium">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#" class="text-primary font-semibold hover:text-primary transition">Trang chủ</a>
+                <a href="#about" class="hover:text-primary transition">Giới thiệu</a>
+                <a href="#article" class="hover:text-primary transition">Bài viết cốt lõi</a>
+                <a href="#news" class="hover:text-primary transition">Tin tức & Hoạt động</a>
+                <a href="#scholarship" class="hover:text-primary transition">Học bổng</a>
+                <a href="#models" class="hover:text-primary transition">Xã hội học tập</a>
+                <a href="#contact" class="hover:text-primary transition">Liên hệ</a>
+            </nav>
+
+            <!-- Action CTA -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#scholarship" class="bg-primary hover:bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-primary/30 transition transform hover:-translate-y-0.5">
+                    Tra cứu học bổng
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Modal / Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#" class="block py-2 text-primary font-semibold">Trang chủ</a>
+            <a href="#about" class="block py-2 text-slate-600 hover:text-primary">Giới thiệu</a>
+            <a href="#article" class="block py-2 text-slate-600 hover:text-primary">Bài viết cốt lõi</a>
+            <a href="#news" class="block py-2 text-slate-600 hover:text-primary">Tin tức & Hoạt động</a>
+            <a href="#scholarship" class="block py-2 text-slate-600 hover:text-primary">Học bổng</a>
+            <a href="#models" class="block py-2 text-slate-600 hover:text-primary">Xã hội học tập</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-primary">Liên hệ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-white/30">
+                    <i class="fas fa-star text-accent"></i> Tổ chức xã hội phi lợi nhuận hàng đầu
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Nâng Cao Dân Trí, Đào Tạo Nhân Lực & Xây Dựng Xã Hội Học Tập
+                </h1>
+                <p class="text-lg sm:text-xl text-emerald-50 mb-8 leading-relaxed">
+                    Hội Khuyến học Việt Nam là tổ chức xã hội phi lợi nhuận nhằm phát huy truyền thống hiếu học của dân tộc, động viên toàn dân tham gia học tập thường xuyên, suốt đời.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#article" class="bg-white text-slate-900 font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-emerald-50 transition transform hover:-translate-y-1">
+                        Khám phá bài viết <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#donate" class="bg-accent hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl shadow-xl transition transform hover:-translate-y-1">
+                        Ủng hộ quỹ học bổng
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats Waves -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="glass-card text-slate-900 p-6 rounded-2xl shadow-lg border border-white/20">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-primary mb-1">25M+</div>
+                    <div class="text-sm font-medium text-slate-600">Hội viên toàn quốc</div>
+                </div>
+                <div class="glass-card text-slate-900 p-6 rounded-2xl shadow-lg border border-white/20">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-secondary mb-1">500 Tỷ+</div>
+                    <div class="text-sm font-medium text-slate-600">Quỹ học bổng đã trao</div>
+                </div>
+                <div class="glass-card text-slate-900 p-6 rounded-2xl shadow-lg border border-white/20">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-accent mb-1">63/63</div>
+                    <div class="text-sm font-medium text-slate-600">Tỉnh thành hội trực thuộc</div>
+                </div>
+                <div class="glass-card text-slate-900 p-6 rounded-2xl shadow-lg border border-white/20">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-indigo-600 mb-1">10M+</div>
+                    <div class="text-sm font-medium text-slate-600">Gia đình học tập</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Article Section (Requested by User) -->
+    <section id="article" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold uppercase tracking-wider text-sm bg-primary/10 px-3.5 py-1.5 rounded-full">Bài Viết Chủ Đề</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">Hội Khuyến Học Việt Nam: Sứ Mệnh Khơi Dậy Tri Thức</h2>
+                <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Tổ chức xã hội phi lợi nhuận hàng đầu trong sự nghiệp phát triển giáo dục và nguồn nhân lực đất nước.</p>
+            </div>
+
+            <!-- Article Content Box -->
+            <div class="prose prose-lg max-w-none text-slate-700 space-y-6 bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm">
+                <p class="lead text-xl font-semibold text-slate-900">
+                    Hội Khuyến học Việt Nam là tổ chức xã hội phi lợi nhuận nhằm nâng cao dân trí, đào tạo nhân lực và xây dựng xã hội học tập, góp phần đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước vì mục tiêu dân giàu, nước mạnh, dân chủ, công bằng, văn minh.
+                </p>
+                
+                <h3 class="text-2xl font-bold text-slate-900 mt-6 flex items-center gap-3">
+                    <i class="fas fa-bullseye text-primary"></i> 1. Sứ mệnh và Mục đích hoạt động cốt lõi
+                </h3>
+                <p>
+                    Được thành lập với sứ mệnh cao cả, Hội hoạt động dựa trên nguyên tắc tự nguyện, dân chủ và tuân thủ pháp luật Việt Nam. Trọng tâm của Hội là vận động toàn dân tham gia học tập thường xuyên, học tập suốt đời từ gia đình, dòng họ đến cộng đồng dân cư và các cơ quan đơn vị.
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Nâng cao dân trí:</strong> Tạo cơ hội học tập bình đẳng cho mọi người dân, đặc biệt là vùng sâu, vùng xa, vùng khó khăn.</li>
+                    <li><strong>Đào tạo nhân lực:</strong> Phối hợp phát hiện, bồi dưỡng và hỗ trợ tài năng trẻ, học sinh sinh viên có hoàn cảnh khó khăn vươn lên trong học tập.</li>
+                    <li><strong>Xây dựng xã hội học tập:</strong> Hiện thực hóa chủ trương của Đảng và Nhà nước về đổi mới căn bản, toàn diện giáo dục và đào tạo.</li>
+                </ul>
+
+                <h3 class="text-2xl font-bold text-slate-900 mt-8 flex items-center gap-3">
+                    <i class="fas fa-network-wired text-secondary"></i> 2. Hệ thống tổ chức rộng khắp cả nước
+                </h3>
+                <p>
+                    Từ trung ương đến tận các thôn bản, tổ dân phố, mạng lưới Hội Khuyến học được xây dựng vững chắc với hàng chục triệu hội viên. Các mô hình tiêu biểu như <em>"Gia đình học tập"</em>, <em>"Dòng họ học tập"</em>, <em>"Cộng đồng học tập"</em> và <em>"Đơn vị học tập"</em> đã trở thành phong trào thi đua sôi nổi, sâu rộng trong đời sống văn hóa xã hội.
+                </p>
+
+                <h3 class="text-2xl font-bold text-slate-900 mt-8 flex items-center gap-3">
+                    <i class="fas fa-hands-helping text-accent"></i> 3. Những thành tựu và đóng góp nổi bật
+                </h3>
+                <p>
+                    Trải qua quá trình hình thành và phát triển, Quỹ Khuyến học các cấp đã trao hàng triệu suất học bổng giá trị cho học sinh nghèo vượt khó, tuyên dương hàng vạn giáo viên tiêu biểu, người lao động sáng tạo. Hội thực sự là chỗ dựa tinh thần và vật chất vững chắc cho những tài năng trẻ chưa có điều kiện thuận lợi phát triển.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Activities Section -->
+    <section id="news" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm bg-primary/10 px-3.5 py-1.5 rounded-full">Tin Tức Mới Nhất</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">Hoạt Động Khuyến Học Toàn Quốc</h2>
+                </div>
+                <a href="#" class="text-primary font-semibold hover:underline mt-4 md:mt-0 flex items-center gap-2">Xem tất cả tin tức <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="News" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-primary uppercase bg-emerald-50 px-3 py-1 rounded-full">Học Bổng</span>
+                            <h3 class="font-bold text-xl text-slate-900 mt-3 mb-2">Trao 500 suất học bổng "Vừ A Dính" cho học sinh dân tộc thiểu số</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Chương trình trao học bổng nhằm động viên các em học sinh có hoàn cảnh khó khăn tại các tỉnh miền núi phía Bắc tiếp tục bước chân đến trường.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 03/10/2026</span>
+                            <a href="#" class="text-primary font-bold hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80" alt="News" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-secondary uppercase bg-sky-50 px-3 py-1 rounded-full">Xã Hội Học Tập</span>
+                            <h3 class="font-bold text-xl text-slate-900 mt-3 mb-2">Hội nghị tổng kết phong trào "Gia đình học tập" giai đoạn 2021-2026</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Đánh giá những bước tiến đột phá trong việc xây dựng xã hội học tập từ cấp cơ sở, tôn vinh hàng ngàn gia đình tiêu biểu.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 01/10/2026</span>
+                            <a href="#" class="text-primary font-bold hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="News" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-accent uppercase bg-amber-50 px-3 py-1 rounded-full">Gương Sáng</span>
+                            <h3 class="font-bold text-xl text-slate-900 mt-3 mb-2">Nữ sinh nghèo vượt khó đỗ thủ khoa nhờ sự tiếp sức của quỹ hội</h3>
+                            <p class="text-slate-600 text-sm line-clamp-3">Câu chuyện cảm động về hành trình 12 năm đến trường đầy nghị lực của em Nguyễn Thị Mai dưới sự đồng hành của Hội Khuyến học.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 28/09/2026</span>
+                            <a href="#" class="text-primary font-bold hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Lookup & Application Section -->
+    <section id="scholarship" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-secondary font-bold uppercase tracking-wider text-sm bg-secondary/10 px-3.5 py-1.5 rounded-full">Tra Cứu & Đăng Ký</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4">Học Bổng Khuyến Học & Hỗ Trợ Tài Năng</h2>
+                <p class="text-slate-600 mt-2">Tra cứu danh sách nhận học bổng hoặc đăng ký xét duyệt học bổng năm học mới.</p>
+            </div>
+
+            <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="flex border-b border-slate-200 mb-8">
+                    <button class="tab-btn pb-4 px-6 font-bold text-primary border-b-2 border-primary text-lg" onclick="switchTab('lookup')">Tra cứu danh sách</button>
+                    <button class="tab-btn pb-4 px-6 font-semibold text-slate-500 hover:text-slate-800 text-lg" onclick="switchTab('register')">Đăng ký nhận học bổng</button>
+                </div>
+
+                <!-- Tab Lookup -->
+                <div id="tab-lookup" class="space-y-6">
+                    <div class="flex gap-4">
+                        <input type="text" id="search-input" placeholder="Nhập họ tên hoặc số CCCD/Mã học sinh..." class="flex-1 px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button onclick="performSearch()" class="bg-primary hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl shadow-md transition">Tra cứu</button>
+                    </div>
+                    <div id="search-result" class="bg-white p-6 rounded-2xl border border-slate-200 text-center text-slate-500">
+                        Nhập thông tin và bấm "Tra cứu" để xem kết quả xét duyệt học bổng.
+                    </div>
+                </div>
+
+                <!-- Tab Register -->
+                <div id="tab-register" class="hidden space-y-4">
+                    <form onsubmit="submitForm(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Họ và tên học sinh/si
